@@ -23,7 +23,9 @@
 4. Exit 
 ---------------------------- 
 Enter Option: 
----------------------------- ```
+---------------------------- 
+
+```
 
 ### When user selects, 
 -	Option 1: Take the deposit amount from the user keyboard. Create a new thread to invoke the deposit function. 
