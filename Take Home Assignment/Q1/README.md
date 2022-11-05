@@ -8,13 +8,11 @@
 
 ### a)	Create a separate function to perform the deposit operation. The function should take the amount that is to be deposited as the input argument and update the account balance. Finally print the message, “You have deposited: <amount> “, to the screen. Prototype of the function is given below. 
 
-``` void *deposit(void *amount);
-```
+``` void *deposit(void *amount); ```
 	
 ### b)	Create another function to perform the withdraw operation. The function should take the amount that is to be withdrawn as the input argument and update the account balance if the amount is less than the current balance. Finally print the message, “You have withdrawn: <amount> “, to the screen. If the amount is larger than the current balance, print “No sufficient amount available to withdraw”. Prototype of the function is given below. 
 
-``` void *withdraw(void *amount);
-```
+``` void *withdraw(void *amount); ```
 
 ### c)	Display a menu as given below to allow the user to select the necessary operation. For implementation use switch-case. 
 
