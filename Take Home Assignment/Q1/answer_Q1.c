@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <unistd.h> 
+#include <semaphore.h>
 
 void *deposit(void *amount);
 void *withdraw(void *amount);
@@ -10,11 +11,14 @@ void menu();
 float bank_balance = 0.0;
 float amount;
 
+sem_t semaphore;
+
 int main(){
 	int op;
 
 	do{
 		menu();
+		sem_init(&semaphore, 1, 1);
 		printf("\nEnter Option: ");
 		scanf("%d", &op);
 		printf("----------------------------\n");
@@ -45,6 +49,7 @@ int main(){
 			case 4:
 				printf("Exitting...\n");
 				//exit
+				sem_destroy(&semaphore);
 				break;
 			default:
 				printf("\nPlease choose correct option!!!\n");
@@ -56,21 +61,21 @@ int main(){
 }
 
 void *deposit(void *amt){
-
+	sem_wait(&semaphore);
 	bank_balance = bank_balance + *(float *)amt;
-
+	sem_post(&semaphore);
 	return 0;
 }
 
 void *withdraw(void *amt){
-
+	sem_wait(&semaphore);
 	if(*(float *)amt > bank_balance){
 		printf("\nWithdrawal limit reached!!!\nWithdrawable amount : %.2f\n\n", bank_balance);
 		bank_balance = 0.0;
 	}else{
 		bank_balance = bank_balance - *(float *)amt;
 	}
-
+	sem_post(&semaphore);
 	return 0;
 }
 
