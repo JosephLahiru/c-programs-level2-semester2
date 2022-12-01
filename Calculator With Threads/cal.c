@@ -18,10 +18,12 @@ int main(){
 
         scanf("%d", &op);
 
-        printf("Please enter value 1: ");
-        scanf("%f", &x);
-        printf("Please enter value 2: ");
-        scanf("%f", &y);
+        if(op!=5){
+            printf("Please enter value 1: ");
+            scanf("%f", &x);
+            printf("Please enter value 2: ");
+            scanf("%f", &y);
+        }
 
         switch (op)
         {
@@ -55,17 +57,17 @@ int main(){
 }
 
 void add(float x, float y){
-    printf("Value after adding %.2f\n", x+y);
+    printf("\nValue after adding %.2f\n", x+y);
 }
 
 void substract(float x, float y){
-    printf("Value after substracting %.2f\n", x-y);
+    printf("\nValue after substracting %.2f\n", x-y);
 }
 
 void multiply(float x, float y){
-    printf("Value after multiplying %.2f\n", x*y);
+    printf("\nValue after multiplying %.2f\n", x*y);
 }
 
 void devide(float x, float y){
-    printf("Value after deviding %.2f\n", x/y);
+    printf("\nValue after deviding %.2f\n", x/y);
 }
