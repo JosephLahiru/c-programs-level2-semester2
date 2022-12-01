@@ -18,38 +18,27 @@ int main(){
 
         scanf("%d", &op);
 
+        printf("Please enter value 1: ");
+        scanf("%f", &x);
+        printf("Please enter value 2: ");
+        scanf("%f", &y);
+
         switch (op)
         {
             case 1:
                 //add
-                printf("Please enter value 1: ");
-                scanf("%f", &x);
-                printf("Please enter value 2: ");
-                scanf("%f", &y);
                 add(x, y);
                 break;
             case 2:
                 //Subtract
-                printf("Please enter value 1: ");
-                scanf("%f", &x);
-                printf("Please enter value 2: ");
-                scanf("%f", &y);
                 substract(x, y);
                 break;
             case 3:
                 //multiply
-                printf("Please enter value 1: ");
-                scanf("%f", &x);
-                printf("Please enter value 2: ");
-                scanf("%f", &y);
                 multiply(x, y);
                 break;
             case 4:
                 //devide
-                printf("Please enter value 1: ");
-                scanf("%f", &x);
-                printf("Please enter value 2: ");
-                scanf("%f", &y);
                 devide(x, y);
                 break;
             case 5:
@@ -66,17 +55,17 @@ int main(){
 }
 
 void add(float x, float y){
-    printf("Value after adding %f", x+y);
+    printf("Value after adding %.2f\n", x+y);
 }
 
 void substract(float x, float y){
-    printf("Value after substracting %f", x-y);
+    printf("Value after substracting %.2f\n", x-y);
 }
 
 void multiply(float x, float y){
-    printf("Value after multiplying %f", x*y);
+    printf("Value after multiplying %.2f\n", x*y);
 }
 
 void devide(float x, float y){
-    printf("Value after deviding %f", x/y);
+    printf("Value after deviding %.2f\n", x/y);
 }
