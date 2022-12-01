@@ -22,18 +22,34 @@ int main(){
         {
             case 1:
                 //add
+                printf("Please enter value 1: ");
+                scanf("%f", &x);
+                printf("Please enter value 2: ");
+                scanf("%f", &y);
                 add(x, y);
                 break;
             case 2:
                 //Subtract
+                printf("Please enter value 1: ");
+                scanf("%f", &x);
+                printf("Please enter value 2: ");
+                scanf("%f", &y);
                 substract(x, y);
                 break;
             case 3:
                 //multiply
+                printf("Please enter value 1: ");
+                scanf("%f", &x);
+                printf("Please enter value 2: ");
+                scanf("%f", &y);
                 multiply(x, y);
                 break;
             case 4:
                 //devide
+                printf("Please enter value 1: ");
+                scanf("%f", &x);
+                printf("Please enter value 2: ");
+                scanf("%f", &y);
                 devide(x, y);
                 break;
             case 5:
