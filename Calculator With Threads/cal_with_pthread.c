@@ -1,7 +1,7 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<pthread.h>
-#include<semaphore.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <semaphore.h>
 
 void *add(void *a) ;
 void *substract(void *a) ;
@@ -88,7 +88,7 @@ void *add(void *a) {
   sem_wait(&mutex);
   ans = x+y;
   sem_post(&mutex);
-  printf("Value after addition: %.2f\n", ans);
+  printf("\nValue after addition: %.2f\n\n", ans);
 }
 
 void *substract(void *a) {
@@ -100,7 +100,7 @@ void *substract(void *a) {
   sem_wait(&mutex);
   ans = x-y;
   sem_post(&mutex);
-  printf("Value after substraction: %.2f\n", ans);
+  printf("\nValue after substraction: %.2f\n\n", ans);
 }
 
 void *multiply(void *a) {
@@ -112,7 +112,7 @@ void *multiply(void *a) {
   sem_wait(&mutex);
   ans = x*y;
   sem_post(&mutex);
-  printf("Value after multiplication: %.2f\n", ans);
+  printf("\nValue after multiplication: %.2f\n\n", ans);
 }
 
 void *devide(void *a) {
@@ -124,5 +124,5 @@ void *devide(void *a) {
   sem_wait(&mutex);
   ans = x/y;
   sem_post(&mutex);
-  printf("Value after divition: %.2f\n", ans);
+  printf("\nValue after divition: %.2f\n\n", ans);
 }
