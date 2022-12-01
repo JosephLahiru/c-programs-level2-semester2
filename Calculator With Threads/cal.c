@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void add(float x, float y);
 void substract(float x, float y);
@@ -8,6 +9,7 @@ void devide(float x, float y);
 int main(){
 
     int op;
+    float x, y;
 
     do{
         printf("\n------- Basic Calculator -------\n\n");
@@ -20,15 +22,19 @@ int main(){
         {
             case 1:
                 //add
+                add(x, y);
                 break;
             case 2:
                 //Subtract
+                substract(x, y);
                 break;
             case 3:
                 //multiply
+                multiply(x, y);
                 break;
             case 4:
                 //devide
+                devide(x, y);
                 break;
             case 5:
                 exit(0);
@@ -44,17 +50,17 @@ int main(){
 }
 
 void add(float x, float y){
-
+    printf("Value after adding %f", x+y);
 }
 
-void subtract(float x, float y){
-
+void substract(float x, float y){
+    printf("Value after substracting %f", x-y);
 }
 
 void multiply(float x, float y){
-
+    printf("Value after multiplying %f", x*y);
 }
 
 void devide(float x, float y){
-
+    printf("Value after deviding %f", x/y);
 }
