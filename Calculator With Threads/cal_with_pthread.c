@@ -21,7 +21,7 @@ void main() {
 
   struct value_struct values;
 
-  pthread_t did, wid;
+  pthread_t add_id, sub_id, mul_id, div_id;
   pthread_attr_t attr;
   pthread_attr_init(&attr);
   sem_init(&mutex, 0, 1);
@@ -41,8 +41,8 @@ void main() {
         printf("Enter Value 2: ");
         scanf("%f", &values.val2);
 
-        pthread_create(&did, &attr, add, (void*)&values);
-        pthread_join(did, NULL);
+        pthread_create(&add_id, &attr, add, (void*)&values);
+        pthread_join(add_id, NULL);
         break;
       case 2:
         printf("Enter Value 1: ");
@@ -50,8 +50,8 @@ void main() {
         printf("Enter Value 2: ");
         scanf("%f", &values.val2);
 
-        pthread_create(&did, &attr, substract, (void*)&values);
-        pthread_join(did, NULL);
+        pthread_create(&sub_id, &attr, substract, (void*)&values);
+        pthread_join(sub_id, NULL);
         break;
       case 3:
         printf("Enter Value 1: ");
@@ -59,8 +59,8 @@ void main() {
         printf("Enter Value 2: ");
         scanf("%f", &values.val2);
 
-        pthread_create(&did, &attr, multiply, (void*)&values);
-        pthread_join(did, NULL);
+        pthread_create(&mul_id, &attr, multiply, (void*)&values);
+        pthread_join(mul_id, NULL);
         break;
       case 4:
         printf("Enter Value 1: ");
@@ -68,8 +68,8 @@ void main() {
         printf("Enter Value 2: ");
         scanf("%f", &values.val2);
 
-        pthread_create(&did, &attr, devide, (void*)&values);
-        pthread_join(did, NULL);
+        pthread_create(&div_id, &attr, devide, (void*)&values);
+        pthread_join(div_id, NULL);
         break;
       case 5:
         exit(0);
